@@ -35,12 +35,17 @@ public class ProductServiceImpl implements IProductService {
 		return result;
 	}
 
+	public ProductDTO findOne(Long id) {
+		ProductEntity newone = productRepository.findOne(id);
+		return productConverter.toDTO(newone);
+	}
+
 	public ProductDTO add(ProductDTO p) {
 		ProductEntity newone = new ProductEntity();
 		newone = productConverter.toEntity(p);
 		return productConverter.toDTO(productRepository.save(newone));
 	}
-	
+
 	public ProductDTO update(ProductDTO p) {
 		ProductEntity newone = new ProductEntity();
 		newone = productConverter.toEntity(p);

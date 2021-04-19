@@ -22,6 +22,8 @@ public class CategoryEntity {
 	private String name;
 	@Column(name = "descs")
 	private String descs;
+	@Column(name = "thumbNail")
+	private String thumbNail;
 
 	@OneToMany(mappedBy = "category")
 	@JsonManagedReference
@@ -31,13 +33,26 @@ public class CategoryEntity {
 		super();
 	}
 
-	public CategoryEntity(long id, String name, String desc, List<ProductEntity> products) {
+
+	public CategoryEntity(long id, String name, String descs, String thumbNail, List<ProductEntity> products) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.descs = desc;
+		this.descs = descs;
+		this.thumbNail = thumbNail;
 		this.products = products;
 	}
+
+
+	public String getThumbNail() {
+		return thumbNail;
+	}
+
+
+	public void setThumbNail(String thumbNail) {
+		this.thumbNail = thumbNail;
+	}
+
 
 	public String getDescs() {
 		return descs;

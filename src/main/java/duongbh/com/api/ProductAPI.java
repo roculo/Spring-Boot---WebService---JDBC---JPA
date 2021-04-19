@@ -29,6 +29,11 @@ public class ProductAPI {
 		return productService.findAll(categoryName);
 	}
 
+	@GetMapping(value = "/api/detail/{productId}")
+	public ProductDTO getProduct(@PathVariable(value = "productId") Long productId) {
+		return productService.findOne(productId);
+	}
+
 	@PostMapping(value = "/api")
 	public ProductDTO addProduct(@RequestBody ProductDTO productDTO) {
 		return productService.add(productDTO);
