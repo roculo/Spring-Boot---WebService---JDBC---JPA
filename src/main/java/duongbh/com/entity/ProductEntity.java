@@ -31,7 +31,7 @@ public class ProductEntity {
 	private int isSold;
 	@Column(name = "createOn")
 	private Date createOn;
-	@Column(name = "thumbNail")
+	@Column(name = "thumbNail", columnDefinition = "TEXT")
 	private String thumbNail;
 
 	@ManyToOne

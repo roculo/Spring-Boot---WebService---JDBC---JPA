@@ -1,6 +1,9 @@
 duongbh\com\api\ProductAPI.class
 duongbh\com\entity\CategoryEntity.class
+duongbh\com\service\imp\CategoryServiceImpl.class
 duongbh\com\jdbc\MySQLConnector.class
+duongbh\com\service\imp\CustomerServiceImpl.class
+duongbh\com\api\TestAPI.class
 duongbh\com\service\IProductService.class
 duongbh\com\repository\ICustomerRepository.class
 duongbh\com\dao\ICustomerDAO.class
@@ -9,11 +12,13 @@ duongbh\com\api\CustomerAPI.class
 duongbh\com\repository\IProductRepository.class
 duongbh\com\jdbc\mapper\CustomerMapper.class
 duongbh\com\dao\impl\CustomerDAO.class
+duongbh\com\api\CategoryAPI.class
 duongbh\com\converter\ProductConverter.class
 duongbh\com\entity\ProductEntity.class
+duongbh\com\service\ICategoryService.class
 duongbh\com\jdbc\impl\SQLQuery.class
+duongbh\com\converter\CatogeryConverter.class
 duongbh\com\service\imp\ProductServiceImpl.class
-duongbh\com\service\imp\CustomerServiceImp.class
 duongbh\com\jdbc\mapper\IRowMapper.class
 duongbh\com\dto\CategoryDTO.class
 duongbh\com\dto\ProductDTO.class

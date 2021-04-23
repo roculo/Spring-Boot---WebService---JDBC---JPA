@@ -1,5 +1,9 @@
 package duongbh.com.service;
 
-public interface ICategoryService  {
+import java.util.List;
 
+import duongbh.com.dto.CategoryDTO;
+
+public interface ICategoryService {
+	List<CategoryDTO> findAll();
 }

@@ -22,7 +22,7 @@ public class CategoryEntity {
 	private String name;
 	@Column(name = "descs")
 	private String descs;
-	@Column(name = "thumbNail")
+	@Column(name = "thumbNail", columnDefinition = "TEXT")
 	private String thumbNail;
 
 	@OneToMany(mappedBy = "category")
@@ -33,7 +33,6 @@ public class CategoryEntity {
 		super();
 	}
 
-
 	public CategoryEntity(long id, String name, String descs, String thumbNail, List<ProductEntity> products) {
 		super();
 		this.id = id;
@@ -43,16 +42,13 @@ public class CategoryEntity {
 		this.products = products;
 	}
 
-
 	public String getThumbNail() {
 		return thumbNail;
 	}
 
-
 	public void setThumbNail(String thumbNail) {
 		this.thumbNail = thumbNail;
 	}
-
 
 	public String getDescs() {
 		return descs;
@@ -84,14 +80,6 @@ public class CategoryEntity {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getDesc() {
-		return descs;
-	}
-
-	public void setDesc(String desc) {
-		this.descs = desc;
 	}
 
 }
